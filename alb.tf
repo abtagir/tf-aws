@@ -11,7 +11,7 @@ resource "aws_lb_target_group" "app" {
   port        = 80
   protocol    = "HTTP"
   vpc_id      = aws_vpc.main.id
-  target_type = "ip"  # Set target type to ip
+  target_type = "ip" # Set target type to ip
 
   health_check {
     path                = "/"
@@ -31,11 +31,11 @@ resource "aws_lb_listener" "app" {
   default_action {
     type             = "forward"
     target_group_arn = aws_lb_target_group.app.arn
-#    type = "fixed-response"
-#    fixed_response {
-#      content_type = "text/plain"
-#      message_body = "Service temporarily unavailable"
-#      status_code  = "503"
-    
+    #    type = "fixed-response"
+    #    fixed_response {
+    #      content_type = "text/plain"
+    #      message_body = "Service temporarily unavailable"
+    #      status_code  = "503"
+
   }
 }

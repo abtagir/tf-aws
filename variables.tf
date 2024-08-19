@@ -37,7 +37,7 @@ variable "task_family" {
 variable "container_image" {
   description = "ECS container image"
   type        = string
-  default     = "abtagir/k8sphp:version1"
+  default     = "abtagir/ecs-app:version1"
 }
 
 variable "alb_name" {
